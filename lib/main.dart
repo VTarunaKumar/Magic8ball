@@ -24,10 +24,12 @@ class _BallState extends State<Ball> {
           onPressed: () {
             setState(() {
               x = Random().nextInt(5) + 1;
-              print("object");
             });
           },
-          child: Image.asset("images/ball$x.png")),
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Image.asset("images/ball$x.png"),
+          )),
     );
   }
 }
